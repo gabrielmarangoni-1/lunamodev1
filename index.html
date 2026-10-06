@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LUNA MODE — Luxury & Contemporary Streetwear</title>
+  <meta name="description" content="LUNA MODE — Edição exclusiva de moda contemporânea, streetwear de luxo e peças essenciais.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/logo-lunamode.png">
+
+  <!-- Google Fonts: Syne & Sora -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'luna-bg': '#0A0C0E',
+            'luna-surface': '#101317',
+            'luna-elevated': '#15191E',
+            'luna-card': '#12161B',
+            'luna-text': '#EDE7DC',
+            'luna-muted': '#9EA5A8',
+            'luna-amber': '#E8913C',
+            'luna-teal': '#2E6B72',
+            'luna-border': 'rgba(237, 231, 220, 0.13)',
+          },
+          fontFamily: {
+            display: ['Syne', 'sans-serif'],
+            body: ['Sora', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="src/styles.css">
+</head>
+<body class="bg-luna-bg text-luna-text font-body antialiased selection:bg-luna-amber selection:text-luna-bg overflow-x-hidden">
+
+  <!-- 1. HEADER COM LOGO OFICIAL EM PNG -->
+  <header class="site-header" role="banner">
+    <div class="max-w-[1440px] w-full mx-auto px-6 md:px-12 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3 py-1 group" aria-label="LUNA MODE Home">
+        <img 
+          src="assets/logo-lunamode.png" 
+          alt="LUNA MODE Logo" 
+          class="h-9 md:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+        >
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 lg:gap-12" aria-label="Navegação Principal">
+        <a href="#new-arrivals" class="nav-link">New Arrivals</a>
+        <a href="#collection" class="nav-link">Collections</a>
+        <a href="#lookbook" class="nav-link">Lookbook</a>
+        <a href="#catalog" class="nav-link">Produtos</a>
+        <a href="#deck" class="nav-link">Deck 3D</a>
+        <a href="#philosophy" class="nav-link">Philosophy</a>
+      </nav>
+
+      <div class="flex items-center gap-4">
+        <a href="#catalog" class="nav-btn-shop hidden sm:inline-block">Shop Now</a>
+        <button type="button" class="btn-mobile-menu md:hidden text-luna-text p-2 focus:outline-none" aria-label="Abrir Menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- DRAWER MOBILE -->
+  <div class="mobile-menu-drawer" aria-hidden="true">
+    <div class="flex justify-between items-center mb-8">
+      <img src="assets/logo-lunamode.png" alt="LUNA MODE" class="h-10 w-auto object-contain">
+      <button type="button" class="btn-mobile-close p-2 text-luna-text" aria-label="Fechar Menu">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+    <nav class="flex flex-col gap-6 text-xl font-display font-bold tracking-tight">
+      <a href="#new-arrivals" class="hover:text-luna-amber transition-colors">NEW ARRIVALS</a>
+      <a href="#collection" class="hover:text-luna-amber transition-colors">COLLECTIONS</a>
+      <a href="#lookbook" class="hover:text-luna-amber transition-colors">LOOKBOOK</a>
+      <a href="#catalog" class="hover:text-luna-amber transition-colors text-luna-amber">CATÁLOGO DE PRODUTOS</a>
+      <a href="#deck" class="hover:text-luna-amber transition-colors">INTERACTIVE DECK</a>
+      <a href="#philosophy" class="hover:text-luna-amber transition-colors">PHILOSOPHY</a>
+    </nav>
+  </div>
+
+  <main>
+    <!-- HERO PORTAL (250vh) -->
+    <section class="hero-scroll-container" aria-label="Hero Experience">
+      <div class="hero-sticky-stage">
+        <div class="portal-panel portal-panel-left">
+          <div class="portal-wireframe"></div>
+          <div class="meta-label">Spring / Summer 2026</div>
+          <div class="stroke-number text-5xl md:text-7xl opacity-20">01</div>
+          <div class="meta-label">Architecture of Form</div>
+        </div>
+
+        <div class="portal-panel portal-panel-right">
+          <div class="portal-wireframe"></div>
+          <div class="meta-label text-right">Paris / São Paulo</div>
+          <div class="stroke-number text-5xl md:text-7xl text-right opacity-20">LM</div>
+          <div class="meta-label text-right">Edition No. 01</div>
+        </div>
+
+        <div class="hero-split-wrapper">
+          <span class="split-luna">LUNA</span>
+          <span class="split-mode">MODE</span>
+        </div>
+
+        <div class="hero-particle particle-1" aria-hidden="true"></div>
+        <div class="hero-particle particle-2" aria-hidden="true"></div>
+
+        <div class="hero-laptop-container">
+          <div class="laptop-frame">
+            <div class="laptop-screen-glass">
+              <img src="assets/hero-laptop.jpg" alt="LUNA MODE Flagship no Laptop" loading="eager">
+            </div>
+          </div>
+        </div>
+
+        <div class="scroll-indicator">
+          <span class="meta-label tracking-[0.25em] text-[10px]">SCROLL TO ENTER</span>
+          <div class="scroll-line"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. CATÁLOGO COM OS 4 PRODUTOS E LEGENDAS OFICIAIS -->
+    <section id="catalog" class="catalog-section py-24 bg-luna-surface border-t border-b border-luna-border">
+      <div class="max-w-[1440px] w-full mx-auto px-6 md:px-12">
+        
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-16 pb-6 border-b border-luna-border">
+          <div>
+            <span class="meta-label text-luna-amber block mb-2">CURATED PIECES · PRONTA ENTREGA</span>
+            <h2 class="headline-display text-4xl sm:text-5xl text-luna-text">SELECTED EDITION</h2>
+          </div>
+          <span class="meta-label text-xs">CONDIÇÕES ESPECIAIS NO PIX</span>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
+          
+          <!-- Produto 01: Camiseta Palm Angels -->
+          <article class="product-item group bg-luna-card p-4 border border-luna-border rounded-sm flex flex-col justify-between">
+            <div>
+              <div class="product-image-container bg-[#08090b] flex items-center justify-center p-4 relative aspect-square">
+                <img src="assets/modal-01.png" alt="Camiseta Palm Angels Logo Preta" class="w-full h-full object-contain filter drop-shadow-md group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute top-2 left-2 bg-luna-bg/85 px-2 py-0.5 text-[9px] font-mono uppercase text-luna-text border border-luna-border">
+                  EXCLUSIVO
+                </div>
+              </div>
+
+              <div class="flex items-center justify-between mt-3 mb-1">
+                <span class="meta-label text-[9px] text-luna-amber">PALM ANGELS</span>
+                <span class="text-[10px] text-luna-muted font-mono">0 Avaliações</span>
+              </div>
+
+              <h3 class="font-display font-bold text-base text-luna-text group-hover:text-luna-amber transition-colors leading-snug">
+                Camiseta Palm Angels Logo Preta
+              </h3>
+
+              <div class="mt-2 text-xs text-luna-muted space-y-0.5 font-light">
+                <p><span class="text-luna-text">Cor:</span> Preta</p>
+                <p class="text-[11px] text-luna-muted/80">Frete calculado no checkout.</p>
+              </div>
+            </div>
+
+            <div class="pt-4 mt-4 border-t border-luna-border/60">
+              <div class="mb-2">
+                <span class="text-[11px] text-luna-muted block font-mono">Preço normal</span>
+                <span class="font-display text-lg font-bold text-luna-text">R$ 179,90</span>
+              </div>
+              <button type="button" class="product-btn-add w-full justify-center text-center">
+                Comprar Agora
+              </button>
+            </div>
+          </article>
+
+          <!-- Produto 02: Jaqueta Nike Club -->
+          <article class="product-item group bg-luna-card p-4 border border-luna-border rounded-sm flex flex-col justify-between">
+            <div>
+              <div class="product-image-container bg-[#08090b] flex items-center justify-center p-4 relative aspect-square">
+                <img src="assets/modal-02.png" alt="Jaqueta Nike Club Masculina" class="w-full h-full object-contain filter drop-shadow-md group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute top-2 left-2 bg-luna-amber px-2 py-0.5 text-[9px] font-mono uppercase font-bold text-luna-bg">
+                  20% OFF
+                </div>
+              </div>
+
+              <div class="flex items-center justify-between mt-3 mb-1">
+                <span class="meta-label text-[9px] text-luna-teal">NIKE CLUB</span>
+                <span class="text-[10px] text-luna-amber font-mono font-semibold">20% off no Pix</span>
+              </div>
+
+              <h3 class="font-display font-bold text-base text-luna-text group-hover:text-luna-amber transition-colors leading-snug">
+                Jaqueta Nike Club Masculina
+              </h3>
+
+              <div class="mt-2 text-xs text-luna-muted space-y-0.5 font-light">
+                <p class="text-xs text-luna-muted/80">
+                  ou <strong class="text-luna-text">3x de R$ 126,31</strong> sem juros <span class="text-luna-amber">(16% off)</span>
+                </p>
+                <span class="text-[10px] text-luna-amber hover:underline block pt-0.5 cursor-pointer">Ver condições</span>
+              </div>
+            </div>
+
+            <div class="pt-4 mt-4 border-t border-luna-border/60">
+              <div class="mb-2">
+                <span class="text-[11px] text-luna-muted/80 line-through block font-mono">De R$ 449,99</span>
+                <div class="flex items-baseline gap-1.5">
+                  <span class="font-display text-lg font-bold text-luna-amber">R$ 359,99</span>
+                  <span class="text-[11px] text-luna-text font-mono">no Pix</span>
+                </div>
+              </div>
+              <button type="button" class="product-btn-add w-full justify-center text-center">
+                Comprar no Pix
+              </button>
+            </div>
+          </article>
+
+          <!-- Produto 03: Blusão Nike Club Fleece -->
+          <article class="product-item group bg-luna-card p-4 border border-luna-border rounded-sm flex flex-col justify-between">
+            <div>
+              <div class="product-image-container bg-[#08090b] flex items-center justify-center p-4 relative aspect-square">
+                <img src="assets/modal-03.png" alt="Blusão Nike Club Fleece Masculino" class="w-full h-full object-contain filter drop-shadow-md group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute top-2 left-2 bg-luna-amber px-2 py-0.5 text-[9px] font-mono uppercase font-bold text-luna-bg">
+                  29% OFF
+                </div>
+              </div>
+
+              <div class="flex items-center justify-between mt-3 mb-1">
+                <span class="meta-label text-[9px] text-luna-teal">NIKE FLEECE</span>
+                <span class="text-[10px] text-luna-amber font-mono font-semibold">29% off no Pix</span>
+              </div>
+
+              <h3 class="font-display font-bold text-base text-luna-text group-hover:text-luna-amber transition-colors leading-snug">
+                Blusão Nike Club Fleece Masculino
+              </h3>
+
+              <div class="mt-2 text-xs text-luna-muted space-y-0.5 font-light">
+                <p class="text-xs text-luna-muted/80">
+                  ou <strong class="text-luna-text">2x de R$ 168,41</strong> sem juros <span class="text-luna-amber">(25% off)</span>
+                </p>
+                <span class="text-[10px] text-luna-amber hover:underline block pt-0.5 cursor-pointer">Ver condições</span>
+              </div>
+            </div>
+
+            <div class="pt-4 mt-4 border-t border-luna-border/60">
+              <div class="mb-2">
+                <span class="text-[11px] text-luna-muted/80 line-through block font-mono">De R$ 449,99</span>
+                <div class="flex items-baseline gap-1.5">
+                  <span class="font-display text-lg font-bold text-luna-amber">R$ 319,99</span>
+                  <span class="text-[11px] text-luna-text font-mono">no Pix</span>
+                </div>
+              </div>
+              <button type="button" class="product-btn-add w-full justify-center text-center">
+                Comprar no Pix
+              </button>
+            </div>
+          </article>
+
+          <!-- Produto 04: Shorts Nike Club -->
+          <article class="product-item group bg-luna-card p-4 border border-luna-border rounded-sm flex flex-col justify-between">
+            <div>
+              <div class="product-image-container bg-[#08090b] flex items-center justify-center p-4 relative aspect-square">
+                <img src="assets/modal-04.png" alt="Shorts Nike Club Masculino" class="w-full h-full object-contain filter drop-shadow-md group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute top-2 left-2 bg-luna-amber px-2 py-0.5 text-[9px] font-mono uppercase font-bold text-luna-bg">
+                  27% OFF
+                </div>
+              </div>
+
+              <div class="flex items-center justify-between mt-3 mb-1">
+                <span class="meta-label text-[9px] text-luna-teal">NIKE ESSENTIALS</span>
+                <span class="text-[10px] text-luna-amber font-mono font-semibold">27% off no Pix</span>
+              </div>
+
+              <h3 class="font-display font-bold text-base text-luna-text group-hover:text-luna-amber transition-colors leading-snug">
+                Shorts Nike Club Masculino
+              </h3>
+
+              <div class="mt-2 text-xs text-luna-muted space-y-0.5 font-light">
+                <p class="text-xs text-luna-muted/80">
+                  ou <strong class="text-luna-text">1x de R$ 230,52</strong> sem juros <span class="text-luna-amber">(23% off)</span>
+                </p>
+                <span class="text-[10px] text-luna-amber hover:underline block pt-0.5 cursor-pointer">Ver condições</span>
+              </div>
+            </div>
+
+            <div class="pt-4 mt-4 border-t border-luna-border/60">
+              <div class="mb-2">
+                <span class="text-[11px] text-luna-muted/80 line-through block font-mono">De R$ 299,99</span>
+                <div class="flex items-baseline gap-1.5">
+                  <span class="font-display text-lg font-bold text-luna-amber">R$ 218,99</span>
+                  <span class="text-[11px] text-luna-text font-mono">no Pix</span>
+                </div>
+              </div>
+              <button type="button" class="product-btn-add w-full justify-center text-center">
+                Comprar no Pix
+              </button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. INTERACTIVE CARD DECK 3D (COM OS 4 ITENS) -->
+    <section id="deck" class="deck-section py-20 bg-luna-bg overflow-hidden">
+      <div class="max-w-[1440px] w-full mx-auto px-6 md:px-12 mb-12 text-center">
+        <span class="meta-label text-luna-amber block mb-2">INTERACTIVE FASHION DECK</span>
+        <h2 class="headline-display text-3xl sm:text-5xl text-luna-text mb-4">DRAG & EXPLORE</h2>
+        <p class="text-xs text-luna-muted font-light max-w-md mx-auto">
+          Arraste o card superior para os lados além de 20% para lançá-lo e revelar a próxima peça.
+        </p>
+      </div>
+
+      <div class="deck-container">
+        <!-- Card 01 -->
+        <div class="deck-card" data-index="0">
+          <div class="deck-card-image bg-[#0a0c0e] flex items-center justify-center p-4">
+            <img src="assets/modal-01.png" alt="Camiseta Palm Angels" class="w-full h-full object-contain filter drop-shadow-lg">
+          </div>
+          <div class="deck-card-body">
+            <div>
+              <span class="meta-label text-[9px] text-luna-amber">PALM ANGELS</span>
+              <h4 class="font-display font-bold text-sm sm:text-base text-luna-text">Camiseta Logo Preta</h4>
+            </div>
+            <span class="text-xs font-mono text-luna-text font-bold">R$ 179,90</span>
+          </div>
+        </div>
+
+        <!-- Card 02 -->
+        <div class="deck-card" data-index="1">
+          <div class="deck-card-image bg-[#0a0c0e] flex items-center justify-center p-4">
+            <img src="assets/modal-02.png" alt="Jaqueta Nike Club" class="w-full h-full object-contain filter drop-shadow-lg">
+          </div>
+          <div class="deck-card-body">
+            <div>
+              <span class="meta-label text-[9px] text-luna-teal">NIKE CLUB · 20% OFF</span>
+              <h4 class="font-display font-bold text-sm sm:text-base text-luna-text">Jaqueta Nike Club</h4>
+            </div>
+            <span class="text-xs font-mono text-luna-amber font-bold">R$ 359,99</span>
+          </div>
+        </div>
+
+        <!-- Card 03 -->
+        <div class="deck-card" data-index="2">
+          <div class="deck-card-image bg-[#0a0c0e] flex items-center justify-center p-4">
+            <img src="assets/modal-03.png" alt="Blusão Nike Fleece" class="w-full h-full object-contain filter drop-shadow-lg">
+          </div>
+          <div class="deck-card-body">
+            <div>
+              <span class="meta-label text-[9px] text-luna-amber">NIKE FLEECE · 29% OFF</span>
+              <h4 class="font-display font-bold text-sm sm:text-base text-luna-text">Blusão Fleece</h4>
+            </div>
+            <span class="text-xs font-mono text-luna-amber font-bold">R$ 319,99</span>
+          </div>
+        </div>
+
+        <!-- Card 04 -->
+        <div class="deck-card" data-index="3">
+          <div class="deck-card-image bg-[#0a0c0e] flex items-center justify-center p-4">
+            <img src="assets/modal-04.png" alt="Shorts Nike Club" class="w-full h-full object-contain filter drop-shadow-lg">
+          </div>
+          <div class="deck-card-body">
+            <div>
+              <span class="meta-label text-[9px] text-luna-teal">NIKE ESSENTIALS · 27% OFF</span>
+              <h4 class="font-display font-bold text-sm sm:text-base text-luna-text">Shorts Nike Club</h4>
+            </div>
+            <span class="text-xs font-mono text-luna-amber font-bold">R$ 218,99</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="deck-progress-wrapper mt-8 flex items-center justify-center gap-4 max-w-xs mx-auto">
+        <span class="deck-progress-current meta-label text-xs font-mono text-luna-text">01 / 04</span>
+        <div class="deck-progress-bar flex-1 h-[1px] bg-luna-border relative">
+          <div class="deck-progress-fill absolute inset-y-0 left-0 bg-luna-amber transition-all duration-300 w-1/4"></div>
+        </div>
+        <button type="button" class="btn-deck-reset meta-label text-[10px] text-luna-muted hover:text-luna-amber transition-colors">
+          REINICIAR
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer pt-16 pb-8 bg-luna-bg border-t border-luna-border">
+    <div class="max-w-[1440px] w-full mx-auto px-6 md:px-12 flex flex-col items-center">
+      <img src="assets/logo-lunamode.png" alt="LUNA MODE" class="h-12 w-auto object-contain mb-8">
+      <p class="text-xs text-luna-muted text-center max-w-sm mb-12">
+        Haute couture contemporânea & curadoria exclusiva de streetwear.
+      </p>
+      <div class="footer-wordmark text-[18vw] leading-none opacity-5 font-display font-extrabold select-none pointer-events-none">
+        LUNA MODE
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
